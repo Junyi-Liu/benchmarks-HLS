@@ -1,5 +1,5 @@
 # Benchmarks_PLP
-Benchmarks, testbenches, and transformed codes by PLP and RT-Dep  
+Benchmarks, testbenches, and transformed codes by parametric loop pipelining (PLP) and runtime dependence analysis (RT-Dep)  
 
 # Naming rule:  
 XXX.c : benchmark loop  
