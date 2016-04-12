@@ -39,9 +39,15 @@ int main() {
 	check = 0;
     
     //m = m_list[t];
-	ub = rand()%N;
-	lb = rand()%(ub+1);
+	ub = rand()%(N-1) +1;
+	lb = rand()%ub;
+
+	// for full region
     m = rand()%N;
+
+    // for conflict region
+    //m = rand()%(ub-lb) + lb;
+
     printf("\n===== lb: %d ", lb);
     printf("\n===== ub: %d ", ub);
     printf("\n===== m: %d \n", m);

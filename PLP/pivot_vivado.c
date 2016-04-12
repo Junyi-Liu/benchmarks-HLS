@@ -9,6 +9,11 @@ void kernel_pivot(int k,
   int i,j;
   //int tmp;
   
+//#pragma HLS ALLOCATION instances=fdiv limit=1 operation
+//#pragma HLS ALLOCATION instances=fmul limit=1 operation
+//#pragma HLS ALLOCATION instances=fsub limit=1 operation
+//#pragma HLS ALLOCATION instances=mul limit=2 operation
+
 /* #pragma scop */
 /*   for (i = 0; i < N; i++){ */
 /*     #pragma HLS PIPELINE */

@@ -36,8 +36,8 @@ int main() {
     //n = n_list[t];
     //k = k_list[t];
 
-    n = rand()%(2*N-1) +1;
-    k = rand()%(n);
+    n = rand()%(2*N-2) +2;
+    k = rand()%(n-1);
 	//n=275;
 	//k=72;
     printf("\n===== n: %d \t| k: %d \n", n, k);

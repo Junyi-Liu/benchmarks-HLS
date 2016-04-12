@@ -38,8 +38,17 @@ int main() {
     //n = n_list[t];
     //m = m_list[t];
 
-    n = rand()%(2*N-LB) + LB +1;
-    m = rand()%(2*N-n+LB +1) - LB;
+	// full test
+	n = rand()%(2*N-LB) + LB +1;
+	m = rand()%(2*N-n+LB +1) - LB;
+
+	// conflict region test
+//	do{
+//		n = rand()%(2*N-LB) + LB +1;
+//		m = rand()%(2*N-n+LB +1) - LB;
+//	}
+//	while(!(m + 40 >= n && n >= m + 21 && n + m >= 21));
+
     printf("\n===== n: %d \t| m: %d \n", n, m);
 
     // reference init

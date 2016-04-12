@@ -14,7 +14,7 @@ int main() {
   int n = 0;
 
   int m;
-  int m_list[STEP] = {20,1} ;
+  int m_list[STEP] = {20,1,19} ;
 
   float A[N][N];
   float A_ref[N][N];
@@ -24,7 +24,16 @@ int main() {
     
     //m = m_list[k];
 
+	// full test
     m = rand()%(N-100) -100;
+
+    // conflit region test
+//	do{
+//		m = rand()%(N-100) -100;
+//	}
+//	while(!((m <= -1 && m >= -19) || (m <= 19 && m >= 1)));
+
+
     printf("\n===== m: %d \n", m);
 
     // reference init

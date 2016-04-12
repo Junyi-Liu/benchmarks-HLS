@@ -17,15 +17,15 @@ void kernel_Tri_Sp_Slv(int m,
 float* L_flt = L;
 float* x_flt = x;
 {
-  if ((m >= lb && m >= ub) || lb >= m + 1) {
+  if (m >= lb && ub >= m + 1) {
     for (int c1 = lb; c1 <= ub; c1 += 1)
       #pragma HLS PIPELINE
-      #pragma HLS DEPENDENCE variable=L_flt array inter false
-      #pragma HLS DEPENDENCE variable=x_flt array inter false
       x_flt[c1] = x_flt[c1] - L_flt[m + 100 * c1] * x_flt[m];
   } else
     for (int c1 = lb; c1 <= ub; c1 += 1)
       #pragma HLS PIPELINE
+      #pragma HLS DEPENDENCE variable=L_flt array inter false
+      #pragma HLS DEPENDENCE variable=x_flt array inter false
       x_flt[c1] = x_flt[c1] - L_flt[m + 100 * c1] * x_flt[m];
 }
 

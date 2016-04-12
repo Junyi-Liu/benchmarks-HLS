@@ -13,23 +13,20 @@ void kernel_jacobi_2d_imper(int n,
   int i, j;
 
 #pragma HLS ALLOCATION instances=mul limit=3 operation
-//#pragma HLS ALLOCATION instances=icmp limit=3 operation
-//#pragma HLS ALLOCATION instances=add limit=5 operation
-//#pragma HLS ALLOCATION instances=sub limit=2 operation
 
 /* Begin Accelerated Scop */ 
 float* A_flt = A;
 {
-  if (m == 0 || m <= -20 || m >= 20) {
+  if ((m <= -1 && m >= -19) || (m <= 19 && m >= 1)) {
     for (int c1 = 100; c1 <= 198; c1 += 1)
       for (int c3 = 100; c3 <= 198; c3 += 1)
         #pragma HLS PIPELINE
-        #pragma HLS DEPENDENCE variable=A_flt array inter false
         A_flt[300 * c1 + c3] = 0.2f * (A_flt[300 * c1 + c3] + A_flt[-m + 300 * c1 + c3] + A_flt[m + 300 * c1 + c3] + A_flt[300 * m + 300 * c1 + c3] + A_flt[-300 * m + 300 * c1 + c3]);
   } else
     for (int c1 = 100; c1 <= 198; c1 += 1)
       for (int c3 = 100; c3 <= 198; c3 += 1)
         #pragma HLS PIPELINE
+        #pragma HLS DEPENDENCE variable=A_flt array inter false
         A_flt[300 * c1 + c3] = 0.2f * (A_flt[300 * c1 + c3] + A_flt[-m + 300 * c1 + c3] + A_flt[m + 300 * c1 + c3] + A_flt[300 * m + 300 * c1 + c3] + A_flt[-300 * m + 300 * c1 + c3]);
 }
 

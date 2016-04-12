@@ -16,12 +16,10 @@ void kernel_row_col(int rows,
 float* buff_A_flt = buff_A;
 float* buff_B_flt = buff_B;
 {
-  if ((cols >= 2 && rows >= 1) || (cols >= 0 && rows <= 0) || cols <= -1) {
+  if (cols <= 3 && cols >= 0 && rows >= 1) {
     for (int c1 = 0; c1 <= rows; c1 += 1)
       for (int c3 = 0; c3 <= cols; c3 += 1) {
         #pragma HLS PIPELINE
-        #pragma HLS DEPENDENCE variable=buff_A_flt array inter false
-        #pragma HLS DEPENDENCE variable=buff_B_flt array inter false
         buff_B_flt[c3 + 200] = buff_A_flt[c3 + 100];
         buff_A_flt[c3 + 100] = buff_B_flt[c3];
       }
@@ -29,6 +27,8 @@ float* buff_B_flt = buff_B;
     for (int c1 = 0; c1 <= rows; c1 += 1)
       for (int c3 = 0; c3 <= cols; c3 += 1) {
         #pragma HLS PIPELINE
+        #pragma HLS DEPENDENCE variable=buff_A_flt array inter false
+        #pragma HLS DEPENDENCE variable=buff_B_flt array inter false
         buff_B_flt[c3 + 200] = buff_A_flt[c3 + 100];
         buff_A_flt[c3 + 100] = buff_B_flt[c3];
       }

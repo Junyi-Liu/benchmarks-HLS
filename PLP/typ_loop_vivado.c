@@ -25,16 +25,16 @@ void kernel_typ_loop(int m,
 /* Begin Accelerated Scop */ 
 float* A_flt = A;
 {
-  if ((m + 34 >= n && m <= 0 && n + m <= 20) || (m >= 1 && m + 20 >= n) || n >= m + 35) {
+  if (m + 40 >= n && n >= m + 21 && n + m >= 21) {
     for (int c1 = 100; c1 <= 199; c1 += 1)
       for (int c3 = 20; c3 < n; c3 += 1)
         #pragma HLS PIPELINE
-        #pragma HLS DEPENDENCE variable=A_flt array inter false
         A_flt[200 * c1 + c3] = A_flt[m + 200 * c1 + c3 - 200] + c1;
   } else
     for (int c1 = 100; c1 <= 199; c1 += 1)
       for (int c3 = 20; c3 < n; c3 += 1)
         #pragma HLS PIPELINE
+        #pragma HLS DEPENDENCE variable=A_flt array inter false
         A_flt[200 * c1 + c3] = A_flt[m + 200 * c1 + c3 - 200] + c1;
 }
 
