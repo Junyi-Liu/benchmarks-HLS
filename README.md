@@ -1,5 +1,5 @@
-# Benchmarks
-Benchmarks, testbenches, and transformed codes for high-level synthesis research
+# Benchmarks for high-level synthesis research
+Benchmarks, testbenches, and transformed codes 
 
 # PLP: parametric loop pipelining
 
