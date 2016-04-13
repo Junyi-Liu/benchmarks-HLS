@@ -10,6 +10,6 @@ XXX_test.c : testbench
 globals.h is the head file for the codes transformed by RT-Dep   
 
 # Related publication:
-Junyi Liu, Samuel Bayliss, and George A. Constantinides, "Offline synthesis of online dependence testing: Parametric loop pipelining for HLS," in FCCM, 2015.
+Junyi Liu, Samuel Bayliss, and George A. Constantinides, "Improve Runtime Parallelism with Parametric Loop Pipelining for High-Level Synthesis," to be submitted to TCAD.
 
-Junyi Liu, Samuel Bayliss, and George A. Constantinides, "Improve Runtime Parallelism with Parametric Loop Pipelining for High-Level Synthesis".
+Junyi Liu, Samuel Bayliss, and George A. Constantinides, "Offline synthesis of online dependence testing: Parametric loop pipelining for HLS," in FCCM, 2015.
