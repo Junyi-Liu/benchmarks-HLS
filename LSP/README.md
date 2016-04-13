@@ -7,4 +7,4 @@ XXX_vivado.c : transformed by LSP for Vivado HLS
 XXX_test.c : testbench  
 
 # Related publication:
-Junyi Liu, John Wickerson, and George A. Constantinides, "Loop Splitting for Efficient Pipelining in High-Level Synthesis," in FCCM, 2016.
+Junyi Liu, John Wickerson, and George A. Constantinides, "Loop splitting for efficient pipelining in high-level synthesis," in FCCM, 2016.
