@@ -3,7 +3,7 @@ Benchmarks, testbenches, and transformed codes by Loop Splitting (LSP)
 
 # Naming rule:  
 XXX.c : benchmark loop  
-XXX_vivado.c : transformed by LSP for Vivado HLS  
+XXX_vivado.c : transformed by LSP for Vivado HLS 2015.4
 XXX_test.c : testbench  
 
 # Related publication:

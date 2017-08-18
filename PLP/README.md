@@ -3,8 +3,8 @@ Benchmarks, testbenches, and transformed codes by parametric loop pipelining (PL
 
 # Naming rule:  
 XXX.c : benchmark loop  
-XXX_vivado.c : transformed by PLP  
-XXX_rt.c : transformed by RT-Dep  
+XXX_vivado.c : transformed by PLP for Vivado HLS 2015.4
+XXX_rt.c : transformed by RT-Dep and manually tuned for Vivado HLS 2015.4  
 XXX_test.c : testbench  
 
 globals.h is the head file for the codes transformed by RT-Dep   

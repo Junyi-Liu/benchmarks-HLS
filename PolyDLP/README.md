@@ -3,7 +3,7 @@ Benchmarks, testbenches, and transformed codes by polyhedral-based loop pipelini
 
 # Naming rule:  
 XXX.c : benchmark loop  
-XXX_vivado.c : transformed by PolyDLP for Vivado HLS  
+XXX_vivado.c : transformed by PolyDLP for Vivado HLS for Vivado HLS 2017.2
 XXX_test.c : testbench  
 
 # Related publication:
