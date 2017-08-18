@@ -3,7 +3,7 @@ Benchmarks, testbenches, and transformed codes by parametric loop pipelining (PL
 
 # Naming rule:  
 XXX.c : benchmark loop  
-XXX_vivado.c : transformed by PLP for Vivado HLS 2015.4
+XXX_vivado.c : transformed by PLP for Vivado HLS 2015.4  
 XXX_rt.c : transformed by RT-Dep and manually tuned for Vivado HLS 2015.4  
 XXX_test.c : testbench  
 
