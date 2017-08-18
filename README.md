@@ -5,4 +5,7 @@ Benchmarks, testbenches, and transformed codes
 
 # LSP: loop splitting for pipelining
 
-# PolyDLP (PLP+LSP): polyhedral-based dynamic loop pipelining 
+# PolyDLP (PLP+LSP): polyhedral-based dynamic loop pipelining
+
+# Thesis: experiments for PhD thesis
+
